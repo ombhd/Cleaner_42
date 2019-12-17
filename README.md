@@ -1,11 +1,20 @@
-#This is a script which install the 'cclean' command
+# Cleaner_42
 
-#it's cleaning the Trash + 42 cache files from Library directory and from the home directory
+**Cleaner_42** This is a script which install the `cclean` command, it's cleaning the Trash and 42 cache files from Library directory and from the home directory
 
-First : Run this command ./CleanerInstaller.sh
-Second: Follow the instructions
-Last  : Enjoy ;)
+## How to use ?
 
-# Note : Please, report any bug happening with you while installing or running the command 
+1. First : Run this command `./CleanerInstaller.sh`
+2. Second: Follow the instructions
+3. Last  : Enjoy ;)
 
-#by OMB
+## Screenshots
+
+<img src="https://i.imgur.com/ugAa0nP.png.png" width="800" />
+
+
+## Note : 
+
+Please, report any bug happening with you while installing or running the command
+Contact me on slack **@OMB** or post an issue here on Github
+42login :obouykou
