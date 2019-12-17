@@ -8,6 +8,4 @@ Last  : Enjoy ;)
 
 # Note : Please, report any bug happening with you while installing or running the command 
 
-#Report to : 42login : [ obouykou ]
-
 #by OMB
