@@ -16,6 +16,7 @@
 ## Note : 
 
 Please, report any bug happening with you while installing or running the command
+
 Contact me on slack **@OMB** or post an issue here on Github
 
 42login : obouykou
