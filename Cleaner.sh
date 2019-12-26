@@ -11,6 +11,7 @@ rm -rf ~/Library/*.42*
 rm -rf ~/*.42*
 rm -rf ~/.cocoapods.42_cache_bak*
 rm -rf ~/.Trash/*
+rm -rf ~/.zcompdump*
 
 Storage=$(df -h . | grep "$HOME" | awk '{print($4)}' | tr 'i' 'B')
 
