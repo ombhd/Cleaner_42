@@ -12,6 +12,7 @@ rm -rf ~/*.42*
 rm -rf ~/.cocoapods.42_cache_bak*
 rm -rf ~/.Trash/*
 rm -rf ~/.zcompdump*
+find ~/Desktop -name .DS_Store -depth -exec rm {} \;
 
 Storage=$(df -h . | grep "$HOME" | awk '{print($4)}' | tr 'i' 'B')
 
