@@ -1,6 +1,14 @@
 #!/bin/bash
 #Author OMB 
 
+if [ "$1" == "update" ];
+then
+	rm -rf ~/Cleaner.sh
+	git clone https://github.com/su-omb/Cleaner_42.git
+	cp ./Cleaner_42/Cleaner.sh ~
+	rm -rf ./Cleaner_42
+	exit 0
+fi
 Storage=$(df -h . | grep "$HOME" | awk '{print($4)}' | tr 'i' 'B')
 if [ "$Storage" == "0BB" ];
 then
