@@ -8,6 +8,10 @@
 2. Second: Follow the instructions
 3. Last  : Enjoy ;)
 
+## How to update ?
+
+Run this command `cclean update`
+
 ## Screenshots
 
 <img src="https://i.imgur.com/ugAa0nP.png.png" width="800" />
