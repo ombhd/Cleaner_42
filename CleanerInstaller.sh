@@ -23,7 +23,7 @@ then
 	mv "$path" "$HOME"
 fi
 
-echo "alias cclean='~/Cleaner.sh'" >> ~/"$shell_f"
+echo "alias cclean='bash ~/Cleaner.sh'" >> ~/"$shell_f"
 
 if [ "alias cclean='~/Cleaner.sh'" == "$(echo -n $(cat ~/"$shell_f" | tail -n 1))" ]
 then
