@@ -22,6 +22,7 @@ rm -rf ~/Library/*.42*
 rm -rf ~/*.42*
 rm -rf ~/.cocoapods.42_cache_bak*
 rm -rf ~/.Trash/*
+rm -rf ~/Library/Caches
 rm -rf ~/.zcompdump*
 find ~/Desktop -name .DS_Store -depth -exec rm {} \;
 
