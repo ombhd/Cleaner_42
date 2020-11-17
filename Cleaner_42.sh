@@ -1,5 +1,6 @@
 #!/bin/bash
-#Author OMB 
+#Author Omar BOUYKOURNE
+#42login : obouykou
 
 if [ "$1" == "update" ];
 then
