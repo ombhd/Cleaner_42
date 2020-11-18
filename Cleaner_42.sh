@@ -7,7 +7,7 @@ then
 	git clone https://github.com/su-omb/Cleaner_42.git
 	if [ "" = "$(diff ~/Cleaner_42.sh ./Cleaner_42/Cleaner_42.sh)" ];
 	then
-		echo -e "\033[33m\n -- You have already the latest version of cclean --\n\033[0m"
+		echo -e "\033[33m\n -- You already have the latest version of cclean --\n\033[0m"
 		exit 0
 	fi
 	cp -f ./Cleaner_42/Cleaner_42.sh ~
