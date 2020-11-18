@@ -18,6 +18,8 @@ then
 	rm -rf ~/Cleaner_42.sh
 fi
 
+cp -f ./Cleaner_42.sh "$HOME"
+
 shell_f=$(echo -n $(ls -a ~ | grep ".zshrc"))
 
 if [ "$shell_f" != ".zshrc" ];
@@ -31,8 +33,6 @@ then
 	echo -e "\033[36m -- Please, run this command now : [\033[33m source ~/"$shell_f"\033[0m\033[36m ] Then run [\033[33m cclean \033[0m\033[36m]--\n\033[0m" 
 	exit
 fi
-
-cp -f ./Cleaner_42.sh "$HOME"
 
 echo "alias cclean='bash ~/Cleaner_42.sh'" >> ~/"$shell_f"
 
