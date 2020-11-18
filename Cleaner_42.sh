@@ -7,6 +7,7 @@ then
 	git clone https://github.com/su-omb/Cleaner_42.git
 	cp -f ./Cleaner_42/Cleaner_42.sh ~
 	rm -rf ./Cleaner_42
+	echo -e "\033[33m\n -- cclean has been updated successfully --\n\033[0m"
 	exit 0
 fi
 Storage=$(df -h . | grep "$HOME" | awk '{print($4)}' | tr 'i' 'B')
