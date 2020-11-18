@@ -8,6 +8,7 @@ then
 	if [ "" = "$(diff ~/Cleaner_42.sh ./Cleaner_42/Cleaner_42.sh)" ];
 	then
 		echo -e "\033[33m\n -- You already have the latest version of cclean --\n\033[0m"
+		rm -rf ./Cleaner_42
 		exit 0
 	fi
 	cp -f ./Cleaner_42/Cleaner_42.sh ~
