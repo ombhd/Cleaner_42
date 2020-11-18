@@ -25,16 +25,21 @@ echo -e "\033[33m\n -- Available Storage Before Cleaning : || $Storage || --\033
 
 echo -e "\033[31m\n -- Cleaning ...\n\033[0m "
 
+#42 Caches
 rm -rf ~/Library/*.42*
 rm -rf ~/*.42*
-rm -rf ~/.cocoapods.42_cache_bak*
-rm -rf ~/.Trash/*
-rm -rf ~/Library/Caches
 rm -rf ~/.zcompdump*
+rm -rf ~/.cocoapods.42_cache_bak*
+#Trash
+rm -rf ~/.Trash/*
+#General Cache files
+rm -rf ~/Library/Caches
+#Slack, VSCode, Discord Caches
 rm -rf ~/Library/Application\ Support/Slack/Service\ Worker/CacheStorage/*
 rm -rf ~/Library/Application\ Support/Code/User/workspaceStorage/*
 rm -rf ~/Library/Application\ Support/discord/Cache/*
 rm -rf ~/Library/Application\ Support/discord/Code\ Cache/js*
+#.DS_Store files
 find ~/Desktop -name .DS_Store -depth -exec rm {} \;
 
 Storage=$(df -h . | grep "$HOME" | awk '{print($4)}' | tr 'i' 'B')
