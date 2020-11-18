@@ -13,6 +13,11 @@ while true; do
     esac
 done
 
+if [ "Cleaner_42.sh" == "$(ls "$HOME" | grep Cleaner_42.sh)"];
+then
+	rm -rf ~/Cleaner_42.sh
+fi
+
 shell_f=$(echo -n $(ls -a ~ | grep ".zshrc"))
 
 if [ "$shell_f" != ".zshrc" ];
