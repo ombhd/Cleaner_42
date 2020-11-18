@@ -4,12 +4,12 @@
 
 if [ "$1" == "update" ];
 then
-	if [ "" = "$(git diff origin/master:https://github.com/su-omb/Cleaner_42/blob/master/Cleaner_42.sh ~/Cleaner_42.sh)" ];
+	git clone https://github.com/su-omb/Cleaner_42.git
+	if [ "" = "$(diff ~/Cleaner_42.sh ./Cleaner_42/Cleaner_42.sh)" ];
 	then
 		echo -e "\033[33m\n -- You have already the latest version of cclean --\n\033[0m"
 		exit 0
 	fi
-	git clone https://github.com/su-omb/Cleaner_42.git
 	cp -f ./Cleaner_42/Cleaner_42.sh ~
 	rm -rf ./Cleaner_42
 	echo -e "\033[33m\n -- cclean has been updated successfully --\n\033[0m"
