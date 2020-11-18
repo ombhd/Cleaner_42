@@ -4,9 +4,8 @@
 
 if [ "$1" == "update" ];
 then
-	rm -rf ~/Cleaner.sh
 	git clone https://github.com/su-omb/Cleaner_42.git
-	cp ./Cleaner_42/Cleaner.sh ~
+	cp -f ./Cleaner_42/Cleaner_42.sh ~
 	rm -rf ./Cleaner_42
 	exit 0
 fi
