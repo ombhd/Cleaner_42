@@ -3,8 +3,8 @@
 #42login obouykou
 
 while true; do
-    echo -e "cclean is cleaning the Trash and 42 cache files from Library directory and from the home directory, plus some of Chrome, VSCode and Discord Caches."
-    read -p "Do you really want to install this program ? " yn
+    echo -e "cclean program cleans: \nThe Trash. \n42 cache files from Library directory and from the home directory. \nSome Slack, VSCode and Discord Caches.\n"
+    read -p "[\033[33mDo you really want to install this program ? \033[0m\033[36m" yn
     case $yn in
         [Yy]* ) make install; break;;
         [Nn]* ) exit;;
