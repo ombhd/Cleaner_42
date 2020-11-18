@@ -4,7 +4,7 @@
 
 if [ "$1" == "update" ];
 then
-	if [ "" = "$(git diff https://github.com/su-omb/Cleaner_42/blob/master/Cleaner_42.sh ~/Cleaner_42.sh)" ];
+	if [ "" = "$(git diff origin/master:https://github.com/su-omb/Cleaner_42/blob/master/Cleaner_42.sh ~/Cleaner_42.sh)" ];
 	then
 		echo -e "\033[33m\n -- You have already the latest version of cclean --\n\033[0m"
 		exit 0
