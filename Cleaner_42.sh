@@ -30,17 +30,25 @@ rm -rf ~/Library/*.42*
 rm -rf ~/*.42*
 rm -rf ~/.zcompdump*
 rm -rf ~/.cocoapods.42_cache_bak*
+
 #Trash
 rm -rf ~/.Trash/*
+
 #General Cache files
 rm -rf ~/Library/Caches
+
 #Slack, VSCode, Discord Caches
 rm -rf ~/Library/Application\ Support/Slack/Service\ Worker/CacheStorage/*
 rm -rf ~/Library/Application\ Support/Code/User/workspaceStorage/*
 rm -rf ~/Library/Application\ Support/discord/Cache/*
 rm -rf ~/Library/Application\ Support/discord/Code\ Cache/js*
+
 #.DS_Store files
 find ~/Desktop -name .DS_Store -depth -exec rm {} \;
+
+#tmp downloaded files with browsers
+rm -rf ~/Library/Application\ Support/Chromium/Default/File\ System
+rm -rf ~/Library/Application\ Support/Google/Chrome/Default/File\ System
 
 Storage=$(df -h . | grep "$HOME" | awk '{print($4)}' | tr 'i' 'B')
 if [ "$Storage" == "0BB" ];
