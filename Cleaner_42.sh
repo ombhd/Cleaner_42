@@ -16,7 +16,7 @@ then
 	echo -e "\033[33m\n -- cclean has been updated successfully --\n\033[0m"
 	exit 0
 fi
-Storage=$(df -h . | grep "$HOME" | awk '{print($4)}' | tr 'i' 'B')
+Storage=$(df -h "$HOME" | grep "$HOME" | awk '{print($4)}' | tr 'i' 'B')
 if [ "$Storage" == "0BB" ];
 then
 	Storage="0B"
@@ -50,7 +50,7 @@ find ~/Desktop -name .DS_Store -depth -exec rm {} \;
 rm -rf ~/Library/Application\ Support/Chromium/Default/File\ System
 rm -rf ~/Library/Application\ Support/Google/Chrome/Default/File\ System
 
-Storage=$(df -h . | grep "$HOME" | awk '{print($4)}' | tr 'i' 'B')
+Storage=$(df -h "$HOME" | grep "$HOME" | awk '{print($4)}' | tr 'i' 'B')
 if [ "$Storage" == "0BB" ];
 then
 	Storage="0B"
