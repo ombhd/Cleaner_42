@@ -20,12 +20,8 @@ fi
 
 cp -f ./Cleaner_42.sh "$HOME"
 
-shell_f=$(echo -n $(ls -a ~ | grep ".zshrc"))
-
-if [ "$shell_f" != ".zshrc" ];
-then
-	shell_f=".bashrc"
-fi
+shell_f=${(echo -n "$SHELL" | awk -F / '{print $3}')}
+shell_f="${HOME}/.${shell_f}rc"
 
 if [ "alias cclean='bash ~/Cleaner_42.sh'" == "$(cat ~/"$shell_f" | grep "alias cclean='bash ~/Cleaner_42.sh'")" ]
 then
