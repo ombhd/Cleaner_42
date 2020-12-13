@@ -20,7 +20,7 @@ fi
 
 cp -f ./Cleaner_42.sh "$HOME"
 
-shell_f=${(echo -n "$SHELL" | awk -F / '{print $3}')}
+shell_f=$(echo -n "$SHELL" | awk -F / '{print $3}')
 shell_f="${HOME}/.${shell_f}rc"
 
 if [ "alias cclean='bash ~/Cleaner_42.sh'" == "$(cat ~/"$shell_f" | grep "alias cclean='bash ~/Cleaner_42.sh'")" ]
