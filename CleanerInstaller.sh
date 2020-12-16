@@ -3,7 +3,7 @@
 #42login obouykou
 
 while true; do
-    echo -e "cclean program cleans: \n1 - The Trash. \n2 - 42 cache files from Library directory and from the home directory. \n3 - Some Slack, VSCode, Chrome and Discord Caches.\n4 - Temporary downloaded files by browsers [Chrome, Chromium].\n"
+    echo -e "cclean program cleans: \n1 - The Trash. \n2 - 42 cache files from Library directory and from the home directory. \n3 - Some Slack, VSCode, Chrome and Discord Caches.\n4 - Temporary downloaded files with browsers [Chrome, Chromium].\n"
     echo -en "\033[33mDo you really want to install this program ? \033[0m\0"
     read yn
     case $yn in
