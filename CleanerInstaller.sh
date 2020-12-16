@@ -36,6 +36,7 @@ if [ "alias cclean='bash ~/Cleaner_42.sh'" == "$(cat "$shell_f" | grep "alias cc
 then
 	echo -e "\033[32m\n -- cclean command has been successfully installed ! Enjoy :) --\n\033[0m"
 	echo -e "\033[36m -- Please, run this command now : [\033[33m source "$shell_f"\033[0m\033[36m ] Then run [\033[33m cclean \033[0m\033[36m]--\n\033[0m" 
+	echo -e " -- Run [\033[33m cclean update\033[0m\033[36m] for updates in future --\n\033[0m" 
 else
 	echo -e "\033[31m\n -- cclean command has NOT been installed ! :( --\n\033[0m"
 fi
