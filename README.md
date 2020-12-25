@@ -1,6 +1,12 @@
 # Cleaner_42
 
-**Cleaner_42** This is a script which install the `cclean` command, it's cleaning the Trash and 42 cache files from Library directory and from the home directory, plus some of Chrome, VSCode and Discord Caches.
+**Cleaner_42** This script installs the `cclean` command, and it's cleaning:
+ - the Trash
+ - 42 caches from Library and Home directories.
+ - Chrome Caches.
+ - VSCode Caches and its workspaces cache storage.
+ - Social Media Apps Caches, like Slack and Discord.
+ - FileSystems which are located in browsers profiles directories, such as Chrome and Chromium.
 
 ## How to use ?
 
