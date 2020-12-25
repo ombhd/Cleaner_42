@@ -4,8 +4,8 @@
 
 #take confirmation
 while true; do
-    echo  "cclean program cleans: "
-    echo  "  - the Trash"
+    echo  "cclean program/command removes: "
+    echo  "  - the Trash contents."
 	echo  "  - 42 caches from Library and Home directories."
 	echo  "  - Chrome Caches."
 	echo  "  - VSCode Caches and its workspaces cache storage."
