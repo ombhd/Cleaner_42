@@ -35,7 +35,7 @@ echo -e "\033[31m\n -- Cleaning ...\n\033[0m "
 /bin/rm -rf ~/.Trash/* &>/dev/null
 
 #General Cache files
-/bin/rm -rf ~/Library/Caches &>/dev/null
+/bin/rm -rf ~/Library/Caches/* &>/dev/null
 
 #Slack, VSCode, Discord and Chrome Caches
 /bin/rm -rf ~/Library/Application\ Support/Slack/Service\ Worker/CacheStorage/* &>/dev/null
