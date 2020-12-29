@@ -2,6 +2,15 @@
 #Author Omar BOUYKOURNE
 #42login : obouykou
 
+
+echo -e		"\n"
+echo -e		" 		█▀▀ █▀▀ █░░ █▀▀ ▄▀█ █▄░█ "
+echo -e		" 		█▄▄ █▄▄ █▄▄ ██▄ █▀█ █░▀█ "                                                                                                                           
+echo -en	"\n    	    	      By: "
+echo -e 	"\033[33m𝒐𝒃𝒐𝒖𝒚𝒌𝒐𝒖\033[0m"
+echo -e		"\n 	report any issues to me in slack: @\033[4;1;34mOMBHD\033[0m\n"
+sleep 2
+
 if [ "$1" == "update" ];
 then
 	git clone --quiet https://github.com/su-omb/Cleaner_42.git
@@ -61,5 +70,6 @@ if [ "$Storage" == "0BB" ];
 then
 	Storage="0B"
 fi
+sleep 1
 echo -e "\033[32m -- Available Storage After Cleaning : || $Storage || --\n\033[0m"
 
