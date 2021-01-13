@@ -2,7 +2,7 @@
 #Author Omar BOUYKOURNE
 #42login : obouykou
 
-
+#banner
 echo -e		"\n"
 echo -e		" 		█▀▀ █▀▀ █░░ █▀▀ ▄▀█ █▄░█ "
 echo -e		" 		█▄▄ █▄▄ █▄▄ ██▄ █▀█ █░▀█ "
@@ -11,20 +11,32 @@ echo -e 	"\033[33m𝒐𝒃𝒐𝒖𝒚𝒌𝒐𝒖\033[0m"
 echo -e		"\n 	report any issues to me in slack: @\033[4;1;34mOMBHD\033[0m\n"
 sleep 2
 
+#update
 if [ "$1" == "update" ];
 then
-	git clone --quiet https://github.com/su-omb/Cleaner_42.git
-	if [ "" == "$(diff ~/Cleaner_42.sh ./Cleaner_42/Cleaner_42.sh)" ];
+	tmp_dir=".issent_wakha_daguis_t9ddart_ghina_ard_trmit_orra_tskert_zond_ism_yad_ikan_repo_gh_desktop_nk_achko_awldi_4ayad_yogguer_l'encrypting_n_2^1000_ghayad_aras_tinin_t''a.*\l7i?t_agmano_mohmad"
+	if ! git clone --quiet https://github.com/su-omb/Cleaner_42.git "$HOME"/"$tmp_dir" &>/dev/null;
+	then
+		sleep 0.5
+		echo -e "\033[31m\n           -- Couldn't update CCLEAN! :( --\033[0m"
+		if [[ "$(pwd)" == "/" ]]; then
+			echo -e "\033[33m\n   -- Maybe you need to change your bad habits XD --\n\033[0m"
+		fi
+		exit 1
+	fi
+	sleep 1
+	if [ "" == "$(diff "$HOME"/Cleaner_42.sh "$HOME"/"$tmp_dir"/Cleaner_42.sh)" ];
 	then
 		echo -e "\033[33m\n -- You already have the latest version of cclean --\n\033[0m"
-		/bin/rm -rf ./Cleaner_42
+		/bin/rm -rf "$HOME"/"${tmp_dir:?}"
 		exit 0
 	fi
-	cp -f ./Cleaner_42/Cleaner_42.sh ~ &>/dev/null
-	/bin/rm -rf ./Cleaner_42 &>/dev/null
+	cp -f "$HOME"/"$tmp_dir"/Cleaner_42.sh "$HOME" &>/dev/null
+	/bin/rm -rf "$HOME"/"${tmp_dir:?}" &>/dev/null
 	echo -e "\033[33m\n -- cclean has been updated successfully --\n\033[0m"
 	exit 0
 fi
+#calculating the current available storage
 Storage=$(df -h "$HOME" | grep "$HOME" | awk '{print($4)}' | tr 'i' 'B')
 if [ "$Storage" == "0BB" ];
 then
@@ -65,6 +77,7 @@ find ~/Desktop -name .DS_Store -depth -exec /bin/rm {} \; &>/dev/null
 /bin/rm -rf ~/Library/Application\ Support/Google/Chrome/Default/File\ System &>/dev/null
 /bin/rm -rf ~/Library/Application\ Support/Google/Chrome/Profile\ [0-9]/File\ System &>/dev/null
 
+#calculating the new available storage after cleaning
 Storage=$(df -h "$HOME" | grep "$HOME" | awk '{print($4)}' | tr 'i' 'B')
 if [ "$Storage" == "0BB" ];
 then

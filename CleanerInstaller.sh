@@ -37,7 +37,7 @@ while true; do
     esac
 done
 
-#remove the old Cleaner and Cleaner42 if anyone exists, then copy the current one to home dir
+#remove the old Cleaner and Cleaner42 if there are any, then copy the current one to Home dir
 /bin/rm -rf ~/Cleaner_42.sh &>/dev/null
 /bin/rm -rf ~/Cleaner.sh &>/dev/null
 cp -f ./Cleaner_42.sh "$HOME"
