@@ -26,7 +26,8 @@
 
 ## Screenshots
 
-<img src="https://i.imgur.com/ugAa0nP.png.png" width="800" />
+<img src="https://github.com/su-omb/Cleaner_42/blob/master/cclean.png" width="800" />
+<img src="https://github.com/su-omb/Cleaner_42/blob/master/cclean_update.png" width="800" />
 
 
 ## Note : 
