@@ -5,7 +5,9 @@
                                                                                                               
 echo -en	"\n    	    	      By: "
 echo -e 	"\033[33m𝒐𝒃𝒐𝒖𝒚𝒌𝒐𝒖\033[0m"
-echo -e		"\n 	report any issues to me in slack: @\033[4;1;34mOMBHD\033[0m\n"
+echo -e		"\n	       report any issues to me in:"
+echo -e		"		   GitHub   ~> \033[4;1;34mombhd\033[0m"
+echo -e		"	   	   42 Slack ~> \033[4;1;34mobouykou\033[0m\n"
 sleep 2
 
 #update
