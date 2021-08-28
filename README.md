@@ -7,6 +7,7 @@
  - VSCode Caches and its workspaces cache storage.
  - Social Media Apps Caches, like Slack and Discord.
  - FileSystems which are located in browsers profiles directories, such as Chrome and Chromium.
+ - Some other type of caches
 
 ## How to install ?
 
@@ -34,6 +35,6 @@
 
 Please, report any bug happening with you while installing or running the command
 
-Contact me on slack **@OMBHD** or post an issue here on Github
+Contact me on 42 slack **@obouykou** or post an issue here on Github
 
 42login : obouykou
