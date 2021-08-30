@@ -15,7 +15,7 @@ sleep 2
 if [ "$1" == "update" ];
 then
 	tmp_dir=".issent_wakha_daguis_t9ddart_ghina_ard_trmit_orra_tskert_zond_ism_yad_ikan_repo_gh_desktop_nk_achko_awldi_4ayad_yogguer_l'encrypting_n_2^10000_ghayad_aras_tinin_t''a.*\l7i?t_agmano_mohmad"
-	if ! git clone --quiet https://github.com/su-omb/Cleaner_42.git "$HOME"/"$tmp_dir" &>/dev/null;
+	if ! git clone --quiet https://github.com/ombhd/Cleaner_42.git "$HOME"/"$tmp_dir" &>/dev/null;
 	then
 		sleep 0.5
 		echo -e "\033[31m\n           -- Couldn't update CCLEAN! :( --\033[0m"
