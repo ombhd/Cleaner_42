@@ -1,6 +1,6 @@
 # Cleaner_42
 
-**Cleaner_42** script is linked with `cclean` command/program, and it's cleaning:
+**Cleaner_42** script is linked to `cclean` command/program, and it's cleaning:
  - the Trash contents.
  - 42 caches from Library and Home directories.
  - Chrome Caches.
