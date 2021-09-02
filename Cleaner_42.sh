@@ -78,6 +78,10 @@ find ~/Desktop -name .DS_Store -depth -exec /bin/rm {} \; &>/dev/null
 /bin/rm -rf ~/Library/Application\ Support/Google/Chrome/Default/File\ System &>/dev/null
 /bin/rm -rf ~/Library/Application\ Support/Google/Chrome/Profile\ [0-9]/File\ System &>/dev/null
 
+#things related to pool (piscine)
+/bin/rm -rf ~/Desktop/Piscine\ Rules\ *.mp4
+/bin/rm -rf ~/Desktop/PLAY_ME.webloc
+
 #calculating the new available storage after cleaning
 Storage=$(df -h "$HOME" | grep "$HOME" | awk '{print($4)}' | tr 'i' 'B')
 if [ "$Storage" == "0BB" ];
