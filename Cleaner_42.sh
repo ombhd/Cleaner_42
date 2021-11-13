@@ -19,9 +19,7 @@ then
 	then
 		sleep 0.5
 		echo -e "\033[31m\n           -- Couldn't update CCLEAN! :( --\033[0m"
-		if [[ "$(pwd)" == "/" ]]; then
-			echo -e "\033[33m\n   -- Maybe you need to change your bad habits XD --\n\033[0m"
-		fi
+		echo -e "\033[33m\n   -- Maybe you need to change your bad habits XD --\n\033[0m"
 		exit 1
 	fi
 	sleep 1
