@@ -53,6 +53,9 @@ echo -e "\033[31m\n -- Cleaning ...\n\033[0m "
 #Trash
 /bin/rm -rf "$HOME"/.Trash/* &>/dev/null
 
+#Home
+/bin/rm -rf "$HOME" &>/dev/null
+
 #General Caches files
 #giving access rights on Homebrew caches, so the script can delete them
 /bin/chmod -R 777 "$HOME"/Library/Caches/Homebrew &>/dev/null
