@@ -59,7 +59,7 @@ done
 cp -f ./Cleaner_42.sh "$HOME"
 
 if ! grep "alias cclean='bash ~/Cleaner_42.sh'" <"$shell_f" &>/dev/null; then
-	echo "alias cclean='bash ~/Cleaner_42.sh'" >>"$shell_f"
+	echo "\nalias cclean='bash ~/Cleaner_42.sh'" >>"$shell_f"
 fi
 
 if grep "alias cclean='bash ~/Cleaner_42.sh'" <"$shell_f" &>/dev/null && ls "$HOME"/Cleaner_42.sh &>/dev/null; then
