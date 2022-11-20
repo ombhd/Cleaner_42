@@ -60,7 +60,6 @@ echo -e "\033[31m\n -- Cleaning ...\n\033[0m "
 /bin/rm -rf "$HOME"/Library/Application\ Support/Caches/* &>/dev/null
 
 #Slack, VSCode, Discord and Chrome Caches
-find "$HOME"/Library/Application\ Support/discord/Cache/ -print0 &>/dev/null | xargs -0 rm -rf &>/dev/null
 /bin/rm -rf "$HOME"/Library/Application\ Support/Slack/Service\ Worker/CacheStorage/* &>/dev/null
 /bin/rm -rf "$HOME"/Library/Application\ Support/Slack/Cache/* &>/dev/null
 /bin/rm -rf "$HOME"/Library/Application\ Support/discord/Cache/* &>/dev/null
