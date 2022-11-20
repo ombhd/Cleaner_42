@@ -60,14 +60,21 @@ echo -e "\033[31m\n -- Cleaning ...\n\033[0m "
 /bin/rm -rf "$HOME"/Library/Application\ Support/Caches/* &>/dev/null
 
 #Slack, VSCode, Discord and Chrome Caches
+find "$HOME"/Library/Application\ Support/discord/Cache/ -print0 &>/dev/null | xargs -0 rm -rf &>/dev/null
 /bin/rm -rf "$HOME"/Library/Application\ Support/Slack/Service\ Worker/CacheStorage/* &>/dev/null
-/bin/rm -rf "$HOME"/Library/Application\ Support/Code/User/workspaceStorage/* &>/dev/null
+/bin/rm -rf "$HOME"/Library/Application\ Support/Slack/Cache/* &>/dev/null
 /bin/rm -rf "$HOME"/Library/Application\ Support/discord/Cache/* &>/dev/null
 /bin/rm -rf "$HOME"/Library/Application\ Support/discord/Code\ Cache/js* &>/dev/null
+/bin/rm -rf "$HOME"/Library/Application\ Support/discord/Crashpad/completed/*  &>/dev/null
+/bin/rm -rf "$HOME"/Library/Application\ Support/Code/Cache/* &>/dev/null
+/bin/rm -rf "$HOME"/Library/Application\ Support/Code/CachedData/* &>/dev/null
+/bin/rm -rf "$HOME"/Library/Application\ Support/Code/Crashpad/completed/* &>/dev/null
+/bin/rm -rf "$HOME"/Library/Application\ Support/Code/User/workspaceStorage/* &>/dev/null
 /bin/rm -rf "$HOME"/Library/Application\ Support/Google/Chrome/Profile\ [0-9]/Service\ Worker/CacheStorage/* &>/dev/null
 /bin/rm -rf "$HOME"/Library/Application\ Support/Google/Chrome/Default/Service\ Worker/CacheStorage/* &>/dev/null
 /bin/rm -rf "$HOME"/Library/Application\ Support/Google/Chrome/Profile\ [0-9]/Application\ Cache/* &>/dev/null
 /bin/rm -rf "$HOME"/Library/Application\ Support/Google/Chrome/Default/Application\ Cache/* &>/dev/null
+/bin/rm -rf "$HOME"/Library/Application\ Support/Google/Chrome/Crashpad/completed/* &>/dev/null
 
 #.DS_Store files
 find "$HOME"/Desktop -name .DS_Store -depth -exec /bin/rm {} \; &>/dev/null
