@@ -20,6 +20,14 @@
 1. First : Run `cclean`
 2. Last  : Enjoy ;)
 
+Options:
+
+`-p`: log file paths as they are cleaned by the script:
+
+```shell
+cclean -p
+```
+
 ## How to update ?
 
 1. First : Run this command `cclean update`
@@ -29,6 +37,7 @@
 
 <img src="https://github.com/su-omb/Cleaner_42/blob/master/cclean.png" width="800" />
 <img src="https://github.com/su-omb/Cleaner_42/blob/master/cclean_update.png" width="800" />
+<img src="https://github.com/su-omb/Cleaner_42/blob/master/cclean-print.png" width="800" />
 
 
 ## Note : 
