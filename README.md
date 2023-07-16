@@ -22,7 +22,7 @@
 
 Options:
 
-`-p`: log file paths as they are cleaned by the script:
+`-p`, `--path`: print file paths as they are cleaned by the script:
 
 ```shell
 cclean -p
@@ -40,7 +40,7 @@ cclean -p
 <img src="https://github.com/su-omb/Cleaner_42/blob/master/cclean-print.png" width="800" />
 
 
-## Note : 
+## Note :
 
 Please, report any bug happening with you while installing or running the command
 
