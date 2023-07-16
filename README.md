@@ -22,11 +22,7 @@
 
 Options:
 
-`-p`, `--path`: print file paths as they are cleaned by the script:
-
-```shell
-cclean -p
-```
+`-p`, `--path`: print file paths as they are cleaned by the script
 
 ## How to update ?
 
