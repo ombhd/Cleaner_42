@@ -22,7 +22,7 @@
 
 Options:
 
-`-p`, `--path`: print file paths as they are cleaned by the script
+`-p`, `--print`: print file paths as they are cleaned by the script
 
 ## How to update ?
 
