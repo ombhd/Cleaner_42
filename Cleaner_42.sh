@@ -105,6 +105,12 @@ function clean {
 	clean_glob "$HOME"/Library/Application\ Support/Google/Chrome/Profile\ [0-9]/Application\ Cache/*
 	clean_glob "$HOME"/Library/Application\ Support/Google/Chrome/Default/Application\ Cache/*
 	clean_glob "$HOME"/Library/Application\ Support/Google/Chrome/Crashpad/completed/*
+ 	clean_glob "$HOME"/Library/Application\ Support/BraveSoftware/Brave-Browser/Profile\ [0-9]/Service\ Worker/CacheStorage/*
+	clean_glob "$HOME"/Library/Application\ Support/BraveSoftware/Brave-Browser/Default/Service\ Worker/CacheStorage/*
+	clean_glob "$HOME"/Library/Application\ Support/BraveSoftware/Brave-Browser/Profile\ [0-9]/Application\ Cache/*
+	clean_glob "$HOME"/Library/Application\ Support/BraveSoftware/Brave-Browser/Default/Application\ Cache/*
+	clean_glob "$HOME"/Library/Application\ Support/BraveSoftware/Brave-Browser/Crashpad/completed/*
+	clean_glob "$HOME"/Library/Application\ Support/Spotify/PersistentCache/*
 
 	#.DS_Store files
 	clean_glob "$HOME"/Desktop/**/*/.DS_Store
@@ -114,6 +120,8 @@ function clean {
 	clean_glob "$HOME"/Library/Application\ Support/Chromium/Profile\ [0-9]/File\ System
 	clean_glob "$HOME"/Library/Application\ Support/Google/Chrome/Default/File\ System
 	clean_glob "$HOME"/Library/Application\ Support/Google/Chrome/Profile\ [0-9]/File\ System
+ 	clean_glob "$HOME"/Library/Application\ Support/BraveSoftware/Brave-Browser/Default/File\ System
+	clean_glob "$HOME"/Library/Application\ Support/BraveSoftware/Brave-Browser/Profile\ [0-9]/File\ System
 
 	#things related to pool (piscine)
 	clean_glob "$HOME"/Desktop/Piscine\ Rules\ *.mp4
