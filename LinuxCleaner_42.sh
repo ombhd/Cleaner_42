@@ -2,6 +2,7 @@
 #Author Omar BOUYKOURNE updated by Anas AAMMARI to support linux
 #42login : obouykou, 42login : aaammari
 
+
 #banner
 echo -e	"\n"
 echo -e	" 		█▀▀ █▀▀ █░░ █▀▀ ▄▀█ █▄░█ "
