@@ -111,6 +111,8 @@ function clean {
 	#Browser Caches - Brave
 	clean_glob "$HOME"/.config/BraveSoftware/Brave-Browser/Default/Cache/*
 	clean_glob "$HOME"/.config/BraveSoftware/Brave-Browser/Profile*/Cache/*
+	clean_glob "$HOME"/.config/BraveSoftware/Brave-Browser/Crashpad/completed/*
+
 
 	#Application Caches
 	clean_glob "$HOME"/.config/Code/Cache/*
@@ -122,16 +124,13 @@ function clean {
 	clean_glob "$HOME"/.config/Slack/Cache/*
 	clean_glob "$HOME"/.config/Slack/Service\ Worker/CacheStorage/*
 	clean_glob "$HOME"/.config/spotify/Users/*/offline-cache/*
+	clean_glob "$HOME"/.config/spotify/PersistentCache/*
     clean_glob "$HOME"/.config/*/Cache/*
     clean_glob "$HOME"/.config/*/cache/*
 
 	#Thumbnails
 	clean_glob "$HOME"/.cache/thumbnails/*
 	clean_glob "$HOME"/.thumbnails/*
-
-	#Log files
-	clean_glob "$HOME"/.xsession-errors*
-	clean_glob "$HOME"/.local/share/xorg/*
 
 	#Temporary files
 	clean_glob /tmp/*
@@ -141,19 +140,14 @@ function clean {
 	#Things related to pool (piscine)
 	clean_glob "$HOME"/Desktop/Piscine\ Rules\ *.mp4
 	clean_glob "$HOME"/Desktop/PLAY_ME.webloc
-	clean_glob "$HOME"/Desktop/Piscine*
 
-	#Recent files and history
-	clean_glob "$HOME"/.local/share/recently-used.xbel*
-	clean_glob "$HOME"/.bash_history
-	clean_glob "$HOME"/.zsh_history
-
-    #Flatpak caches
-	clean_glob "$HOME"/.var/app/*/cache/*
-	clean_glob "$HOME"/.var/app/*/config/*/Cache/*
-    
     # Docker user caches
     clean_glob "$HOME"/.docker/*/cache/*
+
+	#Recent files and history
+	# clean_glob "$HOME"/.local/share/recently-used.xbel*
+	# clean_glob "$HOME"/.bash_history
+	# clean_glob "$HOME"/.zsh_history
 
 	echo -ne "\033[0m"
 }
