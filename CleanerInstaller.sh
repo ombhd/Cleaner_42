@@ -57,7 +57,7 @@ shell_f="${HOME}/.${shell_f}rc"
 #test if it is already installed
 if grep "alias cclean='bash ~/$CLEANER_SCRIPT'" <"$shell_f" &>/dev/null && ls "$HOME"/$CLEANER_SCRIPT &>/dev/null; then
 	sleep 0.5
-	echo -e "\033[33m\n -- cclean Already installed for $OS --\n\033[0m"
+	echo -e "\033[33m\n -- cclean Already installed --\n\033[0m"
 	sleep 0.5
 	echo -e "\033[36m -- Please, run this command now : [\033[33m source $shell_f\033[0m\033[36m ] Then run [\033[33m cclean \033[0m\033[36m]--\n\033[0m"
 	sleep 0.5
@@ -109,8 +109,9 @@ cp -f ./$CLEANER_SCRIPT "$HOME"
 # Remove old aliases from shell config
 if [ -f "$shell_f" ]; then
 	# Create a temporary file without the old aliases
-	grep -v "alias cclean=" "$shell_f" > "${shell_f}.tmp" 2>/dev/null
-	mv "${shell_f}.tmp" "$shell_f" 2>/dev/null
+	tmp_shell_f="/tmp/$(basename "$shell_f").tmp"
+	grep -v "alias cclean=" "$shell_f" > "$tmp_shell_f" 2>/dev/null
+	mv "$tmp_shell_f" "$shell_f" 2>/dev/null
 fi
 
 if ! grep "alias cclean='bash ~/$CLEANER_SCRIPT'" <"$shell_f" &>/dev/null; then

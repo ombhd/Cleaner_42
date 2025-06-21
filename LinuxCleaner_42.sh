@@ -144,11 +144,6 @@ function clean {
     # Docker user caches
     clean_glob "$HOME"/.docker/*/cache/*
 
-	#Recent files and history
-	# clean_glob "$HOME"/.local/share/recently-used.xbel*
-	# clean_glob "$HOME"/.bash_history
-	# clean_glob "$HOME"/.zsh_history
-
 	echo -ne "\033[0m"
 }
 
