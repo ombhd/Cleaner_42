@@ -95,47 +95,65 @@ function clean {
 	clean_glob "$HOME"/.gem/ruby/*/cache/*
 
 	#Browser Caches - Firefox
-	clean_glob "$HOME"/.mozilla/firefox/*/cache2/*
-	clean_glob "$HOME"/.cache/mozilla/firefox/*/cache2/*
-	clean_glob "$HOME"/.mozilla/firefox/*/startupCache/*
-	clean_glob "$HOME"/.mozilla/firefox/*/OfflineCache/*
+	clean_glob "$HOME"/.var/app/org.mozilla.firefox/cache/*
+	clean_glob "$HOME"/.var/app/org.mozilla.firefox/.mozilla/firefox/Crash Reports/*
+	clean_glob "$HOME"/.var/app/org.mozilla.firefox/.mozilla/firefox/*.default*/cache2/*
+	clean_glob "$HOME"/.var/app/org.mozilla.firefox/.mozilla/firefox/*.default*/startupCache/*
+	clean_glob "$HOME"/.var/app/org.mozilla.firefox/.mozilla/firefox/*.default*/OfflineCache/*
+
+
 
 	#Browser Caches - Chrome/Chromium
-	clean_glob "$HOME"/.config/google-chrome/Default/Cache/*
-	clean_glob "$HOME"/.config/google-chrome/Profile*/Cache/*
-	clean_glob "$HOME"/.config/chromium/Default/Cache/*
-	clean_glob "$HOME"/.config/chromium/Profile*/Cache/*
 	clean_glob "$HOME"/.cache/google-chrome/Default/Cache/*
-	clean_glob "$HOME"/.cache/chromium/Default/Cache/*
+	clean_glob "$HOME"/.var/app/com.google.Chrome/cache/*
+	clean_glob "$HOME"/.var/app/com.google.Chrome/config/google-chrome/Default/Service\ Worker/CacheStorage/*
+	clean_glob "$HOME"/.var/app/com.google.Chrome/config/google-chrome/Default/Application\ Cache/*
+	clean_glob "$HOME"/.var/app/com.google.Chrome/config/google-chrome/Default/File\ System
+	clean_glob "$HOME"/.var/app/com.google.Chrome/config/google-chrome/Profile\ [0-9]/Service\ Worker/CacheStorage/*
+	clean_glob "$HOME"/.var/app/com.google.Chrome/config/google-chrome/Profile\ [0-9]/Application\ Cache/*
+	clean_glob "$HOME"/.var/app/com.google.Chrome/config/google-chrome/Profile\ [0-9]/File\ System
 
 	#Browser Caches - Brave
-	clean_glob "$HOME"/.config/BraveSoftware/Brave-Browser/Default/Cache/*
-	clean_glob "$HOME"/.config/BraveSoftware/Brave-Browser/Profile*/Cache/*
-	clean_glob "$HOME"/.config/BraveSoftware/Brave-Browser/Crashpad/completed/*
+	clean_glob "$HOME"/.var/app/com.brave.Browser/cache/*
+	clean_glob "$HOME"/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/Default/Service\ Worker/CacheStorage/*
+	clean_glob "$HOME"/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/Default/Application\ Cache/*
+	clean_glob "$HOME"/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/Default/File\ System
+	clean_glob "$HOME"/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/Profile\ [0-9]/Service\ Worker/CacheStorage/*
+	clean_glob "$HOME"/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/Profile\ [0-9]/Application\ Cache/*
+	clean_glob "$HOME"/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/Profile\ [0-9]/File\ System
+	clean_glob "$HOME"/.cache/brave/Default/Cache/*
 
 
 	#Application Caches
-	clean_glob "$HOME"/.config/Code/Cache/*
-	clean_glob "$HOME"/.config/Code/CachedData/*
-	clean_glob "$HOME"/.config/Code/User/workspaceStorage/*
+	clean_glob "$HOME"/.var/app/com.visualstudio.code/cache/*
+	clean_glob "$HOME"/.var/app/com.visualstudio.code/config/Code/Cache/*
+	clean_glob "$HOME"/.var/app/com.visualstudio.code/config/Code/CachedData/*
+	clean_glob "$HOME"/.var/app/com.visualstudio.code/config/Code/User/workspaceStorage/*
+	clean_glob "$HOME"/.var/app/com.visualstudio.code/config/Code/Crashpad/completed/*
 	clean_glob "$HOME"/.vscode/extensions/*/node_modules/*
-	clean_glob "$HOME"/.config/discord/Cache/*
-	clean_glob "$HOME"/.config/discord/Code\ Cache/*
-	clean_glob "$HOME"/.config/Slack/Cache/*
-	clean_glob "$HOME"/.config/Slack/Service\ Worker/CacheStorage/*
-	clean_glob "$HOME"/.config/spotify/Users/*/offline-cache/*
-	clean_glob "$HOME"/.config/spotify/PersistentCache/*
-    clean_glob "$HOME"/.config/*/Cache/*
-    clean_glob "$HOME"/.config/*/cache/*
+	clean_glob "$HOME"/.var/app/com.discordapp.Discord/cache/*
+	clean_glob "$HOME"/.var/app/com.discordapp.Discord/config/discord/Cache/*
+ 	clean_glob "$HOME"/.var/app/com.discordapp.Discord/config/discord/Code\ Cache/js*
+ 	clean_glob "$HOME"/.var/app/com.discordapp.Discord/config/discord/Crashpad/completed/*
+
+
+	clean_glob "$HOME"/.var/app/com.slack.Slack/cache/*
+	clean_glob "$HOME"/.var/app/com.slack.Slack/config/Slack/Cache/*
+	clean_glob "$HOME"/.var/app/com.slack.Slack/config/Slack/Service\ Worker/CacheStorage/*
+	clean_glob "$HOME"/.var/app/com.slack.Slack/config/Slack/Crashpad/completed/*
+    clean_glob "$HOME"/.var/app/com.spotify.Client/cache/*
+    clean_glob "$HOME"/.var/app/com.spotify.Client/config/spotify/PersistentCache/*
+
+	#.DS_Store files
+	clean_glob "$HOME"/Desktop/**/*/.DS_Store
 
 	#Thumbnails
 	clean_glob "$HOME"/.cache/thumbnails/*
 	clean_glob "$HOME"/.thumbnails/*
 
 	#Temporary files
-	clean_glob /tmp/*
-	clean_glob "$HOME"/.tmp/*
-	clean_glob "$HOME"/tmp/*
+ 	find /tmp -type f -user "$USER" 2>/dev/null | xargs -r clean_glob
+
 
 	#Things related to pool (piscine)
 	clean_glob "$HOME"/Desktop/Piscine\ Rules\ *.mp4
