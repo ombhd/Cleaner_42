@@ -152,7 +152,7 @@ function clean {
 	clean_glob "$HOME"/.thumbnails/*
 
 	#Temporary files
- 	find /tmp -type f -user "$USER" 2>/dev/null | xargs -r clean_glob
+ 	clean_glob $(find /tmp -type f -user "$USER" 2>/dev/null)
 
 
 	#Things related to pool (piscine)
