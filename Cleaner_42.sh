@@ -6,8 +6,8 @@
 echo -e	"\n"
 echo -e	" 		█▀▀ █▀▀ █░░ █▀▀ ▄▀█ █▄░█ "
 echo -e	" 		█▄▄ █▄▄ █▄▄ ██▄ █▀█ █░▀█ "
-echo -en "\n    	    	   By: "
-echo -e "\033[33mOMBHD\033[0m [𝒐𝒃𝒐𝒖𝒚𝒌𝒐𝒖]\n"
+echo -en "\n    	        By: "
+echo -e "OMBHD \033[1;33mⵣ\033[0m [\033[1mamazigh\033[0m] \033[1;33mⵣ\033[0m\n"
 
 sleep 2
 
